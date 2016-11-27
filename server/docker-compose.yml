@@ -1,0 +1,12 @@
+version: '2'
+
+volumes:
+  frps-data:
+
+services:
+  frps:
+    image: frps:0.8.1
+    volumes:
+      - frps-data:/data
+    network_mode: host
+    restart: always
